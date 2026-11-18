@@ -21,30 +21,29 @@
 
     <children>
 
-        <!-- Título -->
         <Label text="Consulta de usuarios - API REST">
             <font>
                 <Font name="System Bold" size="18.0"/>
             </font>
         </Label>
 
-        <!-- Botón y mensaje -->
-        <HBox alignment="CENTER_LEFT" spacing="10.0">
+        <HBox alignment="CENTER_LEFT"
+              spacing="10.0">
 
             <children>
 
                 <Button fx:id="btnConsultar"
                         text="Consultar usuarios"
+                        onAction="#consultarUsuarios"
                         mnemonicParsing="false"/>
 
                 <Label fx:id="lblEstado"
-                       text="Presione «Consultar usuarios»"/>
+                       text="Presione Consultar usuarios"/>
 
             </children>
 
         </HBox>
 
-        <!-- Tabla de usuarios -->
         <TableView fx:id="tablaUsuarios"
                    prefHeight="320.0"
                    VBox.vgrow="ALWAYS">
