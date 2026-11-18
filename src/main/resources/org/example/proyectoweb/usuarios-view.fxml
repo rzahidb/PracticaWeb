@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.proyectoweb.controller.UsuarioController"
+      prefWidth="760.0"
+      prefHeight="420.0"
+      spacing="12.0">
+
+    <padding>
+        <Insets top="15.0"
+                right="15.0"
+                bottom="15.0"
+                left="15.0"/>
+    </padding>
+
+    <children>
+
+        <!-- Título -->
+        <Label text="Consulta de usuarios - API REST">
+            <font>
+                <Font name="System Bold" size="18.0"/>
+            </font>
+        </Label>
+
+        <!-- Botón y mensaje -->
+        <HBox alignment="CENTER_LEFT" spacing="10.0">
+
+            <children>
+
+                <Button fx:id="btnConsultar"
+                        text="Consultar usuarios"
+                        mnemonicParsing="false"/>
+
+                <Label fx:id="lblEstado"
+                       text="Presione «Consultar usuarios»"/>
+
+            </children>
+
+        </HBox>
+
+        <!-- Tabla de usuarios -->
+        <TableView fx:id="tablaUsuarios"
+                   prefHeight="320.0"
+                   VBox.vgrow="ALWAYS">
+
+            <columns>
+
+                <TableColumn fx:id="colId"
+                             text="ID"
+                             prefWidth="45.0"/>
+
+                <TableColumn fx:id="colNombre"
+                             text="Nombre"
+                             prefWidth="115.0"/>
+
+                <TableColumn fx:id="colUsername"
+                             text="Username"
+                             prefWidth="115.0"/>
+
+                <TableColumn fx:id="colCorreo"
+                             text="Correo"
+                             prefWidth="135.0"/>
+
+                <TableColumn fx:id="colTelefono"
+                             text="Teléfono"
+                             prefWidth="110.0"/>
+
+                <TableColumn fx:id="colCiudad"
+                             text="Ciudad"
+                             prefWidth="95.0"/>
+
+                <TableColumn fx:id="colEmpresa"
+                             text="Empresa"
+                             prefWidth="110.0"/>
+
+            </columns>
+
+            <placeholder>
+                <Label text="No hay contenido"/>
+            </placeholder>
+
+        </TableView>
+
+    </children>
+
+</VBox>
