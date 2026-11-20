@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.proyectoweb.controller.CustomerController"
+      prefWidth="1080.0"
+      prefHeight="520.0"
+      spacing="12.0">
+
+    <padding>
+        <Insets top="15.0"
+                right="15.0"
+                bottom="15.0"
+                left="15.0"/>
+    </padding>
+
+    <children>
+
+        <Label text="Consulta de clientes - Supabase API REST">
+            <font>
+                <Font name="System Bold" size="18.0"/>
+            </font>
+        </Label>
+
+        <HBox alignment="CENTER_LEFT" spacing="10.0">
+            <children>
+
+                <Button fx:id="btnConsultar"
+                        text="Consultar clientes"
+                        onAction="#consultarCustomers"
+                        mnemonicParsing="false"/>
+
+                <Label fx:id="lblEstado"
+                       text="Presione Consultar clientes"/>
+
+            </children>
+        </HBox>
+
+        <TableView fx:id="tblCustomers"
+                   prefHeight="400.0"
+                   VBox.vgrow="ALWAYS">
+
+            <columns>
+
+                <TableColumn fx:id="colId"
+                             text="ID"
+                             prefWidth="45.0"/>
+
+                <TableColumn fx:id="colNombre"
+                             text="Nombre"
+                             prefWidth="110.0"/>
+
+                <TableColumn fx:id="colApellido"
+                             text="Apellido"
+                             prefWidth="110.0"/>
+
+                <TableColumn fx:id="colCorreo"
+                             text="Correo"
+                             prefWidth="190.0"/>
+
+                <TableColumn fx:id="colTelefono"
+                             text="Teléfono"
+                             prefWidth="115.0"/>
+
+                <TableColumn fx:id="colPais"
+                             text="País"
+                             prefWidth="95.0"/>
+
+                <TableColumn fx:id="colCiudad"
+                             text="Ciudad"
+                             prefWidth="110.0"/>
+
+                <TableColumn fx:id="colIngresoAnual"
+                             text="Ingreso anual"
+                             prefWidth="110.0"/>
+
+                <TableColumn fx:id="colPuntaje"
+                             text="Puntaje"
+                             prefWidth="80.0"/>
+
+                <TableColumn fx:id="colDeudaPendiente"
+                             text="¿Tiene deuda?"
+                             prefWidth="105.0"/>
+
+                <TableColumn fx:id="colMontoDeuda"
+                             text="Monto deuda"
+                             prefWidth="105.0"/>
+
+                <TableColumn fx:id="colEstado"
+                             text="Estado"
+                             prefWidth="85.0"/>
+
+            </columns>
+
+            <placeholder>
+                <Label text="No hay contenido"/>
+            </placeholder>
+
+        </TableView>
+
+    </children>
+
+</VBox>
